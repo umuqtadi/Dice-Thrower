@@ -10,6 +10,22 @@ namespace Dice_Thrower
     {
         static void Main(string[] args)
         {
+            throw(2d20);
+        }
+
+        public static void ThrowDice(string diceString)
+        {
+            string[] diceArray = diceString.Split('d');
+
+            Random rng = new Random();
+
+            for (int i = 0; i <= int.Parse(diceArray[0]); i++)
+            {
+                if (rng.Next(0, int.Parse(diceArray[1] + 1))
+                {
+                    
+                }
+            }
         }
     }
 }
