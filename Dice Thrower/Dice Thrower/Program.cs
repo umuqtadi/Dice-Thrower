@@ -10,22 +10,24 @@ namespace Dice_Thrower
     {
         static void Main(string[] args)
         {
-            throw(2d20);
+            ThrowDice("2d20");
+            ThrowDice("3d10");
+
+            Console.ReadKey();
         }
 
-        public static void ThrowDice(string diceString)
+        public static void ThrowDice(string input)
         {
-            string[] diceArray = diceString.Split('d');
+            List<string> diceList = input.Split('d').ToList();
 
             Random rng = new Random();
 
-            for (int i = 0; i <= int.Parse(diceArray[0]); i++)
+            for (int i = 0; i <= int.Parse(diceList[0]); i++)
             {
-                if (rng.Next(0, int.Parse(diceArray[1] + 1))
-                {
-                    
-                }
+                Console.WriteLine(rng.Next(1, int.Parse(diceList[1]) + 1));
+                
             }
+            Console.WriteLine();
         }
     }
 }
